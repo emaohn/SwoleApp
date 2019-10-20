@@ -10,7 +10,7 @@ import UIKit
 
 class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var workouts: [Workout]?
+    var workouts = [Workout(title: "Larry's Workout", exercises: [Exercise(type: .Curl, numReps: 6, numSets: 1), Exercise(type: .Curl, numReps: 5, numSets: 2)])]
     var selectedWorkout: Workout?
     
     @IBOutlet weak var workoutsTableView: UITableView!
@@ -26,6 +26,9 @@ class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        selectedWorkout = nil
+        //reloadData()
+        setup()
     }
     
     func setup() {
@@ -33,7 +36,8 @@ class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func reloadData() {
-        workoutsTableView.reloadData()
+//        workouts = Variables.workouts
+//        workoutsTableView.reloadData()
     }
     
     @IBAction func addWorkoutButton(_ sender: Any) {
@@ -45,36 +49,28 @@ class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableVi
         switch segue.identifier {
         case "addWorkout":
             destination?.exercises = [Exercise]()
-        case "editWorkout":
-            destination?.workout = selectedWorkout
-            destination?.nameTextField.text = selectedWorkout?.title
-            destination?.exercises = selectedWorkout?.exercises
+       
         default: return
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedWorkout = workouts?[indexPath.row]
+        selectedWorkout = workouts[indexPath.row]
         self.performSegue(withIdentifier: "editWorkout", sender: nil)
+        let workout = workouts[indexPath.row]
+        let pastWorkout = PastWorkout(workout: workout, date: Date())
+//        workoutHistory.append(pastWorkout)
+//        Variables.selectedWorkout = workout
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return workouts?.count ?? 0
+        return workouts.count
     }
        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = workoutsTableView.dequeueReusableCell(withIdentifier: "workoutCell", for: indexPath) as! WorkoutTableViewCell
-        cell.titleLabel.text = workouts?[indexPath.row].title
+        cell.titleLabel.text = workouts[indexPath.row].title
         return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

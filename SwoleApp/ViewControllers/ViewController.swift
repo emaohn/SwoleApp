@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var historyTableView: UITableView!
     @IBOutlet weak var startWorkoutButton: UIButton!
 
-    var workoutHistory: [PastWorkout]?
+    var workoutHistory = Variables.workoutHistory
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        reloadData()
     }
     
     func setup() {
@@ -34,7 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func reloadData() {
-        
+        workoutHistory = Variables.workoutHistory
+        historyTableView.reloadData()
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,8 +53,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let history = workoutHistory else {return 1}
-        return history.count + 1
+        let history = workoutHistory
+        return workoutHistory.count + 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -68,8 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return historyTableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath)
         }
         let cell = historyTableView.dequeueReusableCell(withIdentifier: "historyTableViewCell", for: indexPath) as! HistoryTableViewCell
-        guard let history = workoutHistory else {return cell}
-        let workout = history[indexPath.row - 1]
+        let workout = workoutHistory[indexPath.row - 1]
         cell.dateLabel.text = workout.dateToStrig()
         var s = ""
         for exercise in workout.workout.exercises {

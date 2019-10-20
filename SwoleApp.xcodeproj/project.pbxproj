@@ -34,6 +34,7 @@
 		E8DBC337235C3C9C004084D2 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC336235C3C9C004084D2 /* Exercise.swift */; };
 		E8DBC339235C714B004084D2 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC338235C714B004084D2 /* DataHelper.swift */; };
 		E8DBC33B235C7A53004084D2 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC33A235C7A53004084D2 /* ExerciseTableViewCell.swift */; };
+		E8DBC33D235CA959004084D2 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC33C235CA959004084D2 /* Variables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		E8DBC336235C3C9C004084D2 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		E8DBC338235C714B004084D2 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		E8DBC33A235C7A53004084D2 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		E8DBC33C235CA959004084D2 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				E8DBC338235C714B004084D2 /* DataHelper.swift */,
+				E8DBC33C235CA959004084D2 /* Variables.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				E8DBC303235C0839004084D2 /* HistoryTableViewCell.swift in Sources */,
 				E8DBC337235C3C9C004084D2 /* Exercise.swift in Sources */,
 				E8DBC305235C09F3004084D2 /* User.swift in Sources */,
+				E8DBC33D235CA959004084D2 /* Variables.swift in Sources */,
 				E8DBC315235C2BA2004084D2 /* EditExerciseViewController.swift in Sources */,
 				E8DBC2C4235C0737004084D2 /* SceneDelegate.swift in Sources */,
 				E8DBC339235C714B004084D2 /* DataHelper.swift in Sources */,

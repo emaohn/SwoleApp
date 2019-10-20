@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="1787" y="-617"/>
         </scene>
-        <!--Hi, Anthony-->
+        <!--Hi, Larry-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +163,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hi, Anthony" id="s0e-UL-r5e">
+                    <navigationItem key="navigationItem" title="Hi, Larry" id="s0e-UL-r5e">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-settings" id="sWc-vF-Dfv">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
@@ -200,14 +200,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-zb-1kj">
-                                                    <rect key="frame" x="20" y="30" width="114" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-zb-1kj">
+                                                    <rect key="frame" x="35" y="30" width="114" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GR8-zb-1kj" firstAttribute="leading" secondItem="m8B-Op-R7I" secondAttribute="leadingMargin" constant="15" id="UbL-2b-aO5"/>
+                                                <constraint firstItem="GR8-zb-1kj" firstAttribute="centerY" secondItem="m8B-Op-R7I" secondAttribute="centerY" id="wdX-2C-GgO"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="titleLabel" destination="GR8-zb-1kj" id="zT1-eT-7PC"/>
@@ -300,8 +303,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Sets 4 Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkt-eU-lik">
-                                                    <rect key="frame" x="288" y="20" width="106" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Sets 4 Reps" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkt-eU-lik">
+                                                    <rect key="frame" x="188" y="20" width="206" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -346,6 +349,7 @@
                                         </state>
                                         <connections>
                                             <action selector="doneButtonPressed:" destination="rxI-yJ-0av" eventType="touchUpInside" id="rQb-Zv-v9J"/>
+                                            <segue destination="5mJ-rf-3Zs" kind="show" id="Gte-fl-t2Q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -465,14 +469,14 @@
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-ID-wfR">
-                                <rect key="frame" x="29" y="190" width="39" height="21"/>
+                                <rect key="frame" x="29" y="190" width="137" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQk-vk-0LQ">
-                                <rect key="frame" x="29" y="280" width="44" height="21"/>
+                                <rect key="frame" x="29" y="280" width="184" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -514,6 +518,8 @@
                     </view>
                     <connections>
                         <outlet property="exercisePickerView" destination="Aqe-mA-m3A" id="pia-NP-Mij"/>
+                        <outlet property="repLabel" destination="X1f-ID-wfR" id="ATJ-Yi-nXc"/>
+                        <outlet property="stepLabel" destination="oQk-vk-0LQ" id="gdB-45-PgL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFr-DZ-V7T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -618,5 +624,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gx4-RC-o86"/>
+        <segue reference="1uP-MV-rVd"/>
     </inferredMetricsTieBreakers>
 </document>
