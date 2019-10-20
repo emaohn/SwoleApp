@@ -18,11 +18,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setup();
     }
     
     func setup() {
         statsView.layer.cornerRadius = 15
-        startWorkoutButton.layer.cornerRadius = 100
+        startWorkoutButton.layer.cornerRadius = 30
     }
 
     @IBAction func startWorkoutButtonPressed(_ sender: Any) {
@@ -32,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 80
     }
        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,9 +41,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let workout = users[0].workoutHistory[indexPath.row]
         switch workout.exerciseType {
         case .BenchPress: cell.label.text = "bench press"
-        case .Curl: cell.label.text = "bench press"
-        case .Lunge: cell.label.text = "bench press"
-        case .PushUp: cell.label.text = "bench press"
+        case .Curl: cell.label.text = "curl"
+        case .Lunge: cell.label.text = "lunge"
+        case .PushUp: cell.label.text = "pushup"
         default: return cell
         }
         return cell;
