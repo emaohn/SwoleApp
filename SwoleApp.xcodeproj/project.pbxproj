@@ -22,7 +22,7 @@
 		E8DBC2EB235C073D004084D2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2EA235C073D004084D2 /* NotificationController.swift */; };
 		E8DBC2ED235C073E004084D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DBC2EC235C073E004084D2 /* Assets.xcassets */; };
 		E8DBC303235C0839004084D2 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC302235C0839004084D2 /* HistoryTableViewCell.swift */; };
-		E8DBC305235C09F3004084D2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC304235C09F3004084D2 /* Person.swift */; };
+		E8DBC305235C09F3004084D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC304235C09F3004084D2 /* User.swift */; };
 		E8DBC307235C0A30004084D2 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC306235C0A30004084D2 /* Workout.swift */; };
 		E8DBC309235C1B45004084D2 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC308235C1B45004084D2 /* WorkoutsViewController.swift */; };
 		E8DBC30B235C1B52004084D2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC30A235C1B52004084D2 /* SettingsViewController.swift */; };
@@ -30,6 +30,10 @@
 		E8DBC311235C2B6F004084D2 /* EditWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC310235C2B6F004084D2 /* EditWorkoutViewController.swift */; };
 		E8DBC313235C2B8D004084D2 /* CreateExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC312235C2B8D004084D2 /* CreateExerciseViewController.swift */; };
 		E8DBC315235C2BA2004084D2 /* EditExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC314235C2BA2004084D2 /* EditExerciseViewController.swift */; };
+		E8DBC335235C3C94004084D2 /* PastWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC334235C3C94004084D2 /* PastWorkout.swift */; };
+		E8DBC337235C3C9C004084D2 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC336235C3C9C004084D2 /* Exercise.swift */; };
+		E8DBC339235C714B004084D2 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC338235C714B004084D2 /* DataHelper.swift */; };
+		E8DBC33B235C7A53004084D2 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC33A235C7A53004084D2 /* ExerciseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +99,7 @@
 		E8DBC2EE235C073E004084D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8DBC2EF235C073E004084D2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		E8DBC302235C0839004084D2 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
-		E8DBC304235C09F3004084D2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E8DBC304235C09F3004084D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E8DBC306235C0A30004084D2 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		E8DBC308235C1B45004084D2 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		E8DBC30A235C1B52004084D2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,10 @@
 		E8DBC310235C2B6F004084D2 /* EditWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWorkoutViewController.swift; sourceTree = "<group>"; };
 		E8DBC312235C2B8D004084D2 /* CreateExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExerciseViewController.swift; sourceTree = "<group>"; };
 		E8DBC314235C2BA2004084D2 /* EditExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExerciseViewController.swift; sourceTree = "<group>"; };
+		E8DBC334235C3C94004084D2 /* PastWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastWorkout.swift; sourceTree = "<group>"; };
+		E8DBC336235C3C9C004084D2 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		E8DBC338235C714B004084D2 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		E8DBC33A235C7A53004084D2 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +208,7 @@
 			children = (
 				E8DBC302235C0839004084D2 /* HistoryTableViewCell.swift */,
 				E8DBC30C235C1B6E004084D2 /* WorkoutTableViewCell.swift */,
+				E8DBC33A235C7A53004084D2 /* ExerciseTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,8 +216,10 @@
 		E8DBC2FF235C07FE004084D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E8DBC304235C09F3004084D2 /* Person.swift */,
+				E8DBC304235C09F3004084D2 /* User.swift */,
 				E8DBC306235C0A30004084D2 /* Workout.swift */,
+				E8DBC334235C3C94004084D2 /* PastWorkout.swift */,
+				E8DBC336235C3C9C004084D2 /* Exercise.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +227,7 @@
 		E8DBC300235C0807004084D2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E8DBC338235C714B004084D2 /* DataHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -362,12 +374,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8DBC2C6235C0737004084D2 /* ViewController.swift in Sources */,
+				E8DBC33B235C7A53004084D2 /* ExerciseTableViewCell.swift in Sources */,
+				E8DBC335235C3C94004084D2 /* PastWorkout.swift in Sources */,
 				E8DBC309235C1B45004084D2 /* WorkoutsViewController.swift in Sources */,
 				E8DBC2C2235C0737004084D2 /* AppDelegate.swift in Sources */,
 				E8DBC303235C0839004084D2 /* HistoryTableViewCell.swift in Sources */,
-				E8DBC305235C09F3004084D2 /* Person.swift in Sources */,
+				E8DBC337235C3C9C004084D2 /* Exercise.swift in Sources */,
+				E8DBC305235C09F3004084D2 /* User.swift in Sources */,
 				E8DBC315235C2BA2004084D2 /* EditExerciseViewController.swift in Sources */,
 				E8DBC2C4235C0737004084D2 /* SceneDelegate.swift in Sources */,
+				E8DBC339235C714B004084D2 /* DataHelper.swift in Sources */,
 				E8DBC307235C0A30004084D2 /* Workout.swift in Sources */,
 				E8DBC313235C2B8D004084D2 /* CreateExerciseViewController.swift in Sources */,
 				E8DBC30D235C1B6E004084D2 /* WorkoutTableViewCell.swift in Sources */,

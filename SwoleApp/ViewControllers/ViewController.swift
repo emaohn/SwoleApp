@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var historyTableView: UITableView!
     @IBOutlet weak var startWorkoutButton: UIButton!
 
-    let user = Person(user_id: "0", username: "emmie", workoutHistory: [Workout(exerciseType: .BenchPress), Workout(exerciseType: .Curl), Workout(exerciseType: .PushUp)])
+    var workoutHistory: [PastWorkout]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +22,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setup();
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     func setup() {
         statsView.layer.cornerRadius = 15
         historyTableView.layer.cornerRadius = 15
         startWorkoutButton.layer.cornerRadius = 20
     }
-
+    
+    func reloadData() {
+        
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier {
+//        case "openSettings":
+//            let destination = segue.destination as? SettingsViewController
+//        case "startWorkout":
+//            let destination = segue.destination as? WorkoutsViewController
+//            destination?.workouts =
+//        default: return
+//        }
+//    }
+    
     @IBAction func startWorkoutButtonPressed(_ sender: Any) {
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return user.workoutHistory.count + 1
+        guard let history = workoutHistory else {return 1}
+        return history.count + 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -46,9 +68,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return historyTableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath)
         }
         let cell = historyTableView.dequeueReusableCell(withIdentifier: "historyTableViewCell", for: indexPath) as! HistoryTableViewCell
-        let workout = user.workoutHistory[indexPath.row - 1]
-        cell.dateLabel.text = "Saturday, 10/19/19"
-        cell.workoutListLabel.text = "Bench press, lunges, pushups"
+        guard let history = workoutHistory else {return cell}
+        let workout = history[indexPath.row - 1]
+        cell.dateLabel.text = workout.dateToStrig()
+        var s = ""
+        for exercise in workout.workout.exercises {
+            s += "\(exercise.type.rawValue), "
+        }
+        cell.workoutListLabel.text = s
         
         return cell;
     }

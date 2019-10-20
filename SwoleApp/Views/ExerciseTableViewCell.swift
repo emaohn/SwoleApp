@@ -1,5 +1,5 @@
 //
-//  WorkoutTableViewCell.swift
+//  ExerciseTableViewCell.swift
 //  SwoleApp
 //
 //  Created by Emmie Ohnuki on 10/20/19.
@@ -8,9 +8,11 @@
 
 import UIKit
 
-class WorkoutTableViewCell: UITableViewCell {
+class ExerciseTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var routineLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

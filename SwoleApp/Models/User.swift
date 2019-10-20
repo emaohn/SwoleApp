@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Person {
-    let user_id: String
-    var username: String
-    var workoutHistory: [Workout]
+struct User {
+    var name: String
+    var workoutHistory: [PastWorkout]
+    var workouts: [Workout]
 }

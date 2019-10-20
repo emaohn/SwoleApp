@@ -9,15 +9,10 @@
 import UIKit
 
 class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
+    var workouts: [Workout]?
+    var selectedWorkout: Workout?
     
-
     @IBOutlet weak var workoutsTableView: UITableView!
     @IBOutlet weak var addWorkoutButton: UIButton!
     
@@ -29,13 +24,47 @@ class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableVi
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     func setup() {
         addWorkoutButton.layer.cornerRadius = 20
     }
     
-    @IBAction func addWorkoutButton(_ sender: Any) {
+    func reloadData() {
+        
     }
     
+    @IBAction func addWorkoutButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "addWorkout", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? EditWorkout
+        switch segue.identifier {
+        case "addWorkout":
+            destination?.exercises = [Exercise]()
+        case "editWorkout":
+            destination?.workout = selectedWorkout
+        default: return
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedWorkout = workouts?[indexPath.row]
+        self.performSegue(withIdentifier: "editWorkout", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return workouts?.count ?? 0
+    }
+       
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = workoutsTableView.dequeueReusableCell(withIdentifier: "workoutCell", for: indexPath) as! WorkoutTableViewCell
+        cell.titleLabel.text = workouts?[indexPath.row].title
+        return cell
+    }
     /*
     // MARK: - Navigation
 

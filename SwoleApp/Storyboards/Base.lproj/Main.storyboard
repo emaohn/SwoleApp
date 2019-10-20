@@ -144,7 +144,7 @@
                                 </state>
                                 <connections>
                                     <action selector="startWorkoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chq-sE-CiO"/>
-                                    <segue destination="5mJ-rf-3Zs" kind="show" id="1uP-MV-rVd"/>
+                                    <segue destination="5mJ-rf-3Zs" kind="show" identifier="startWorkout" id="1uP-MV-rVd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,7 +167,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-settings" id="sWc-vF-Dfv">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
-                                <segue destination="v7L-AW-wkW" kind="show" id="PeT-6g-ZJZ"/>
+                                <segue destination="v7L-AW-wkW" kind="show" identifier="openSettings" id="PeT-6g-ZJZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -209,6 +209,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="GR8-zb-1kj" id="zT1-eT-7PC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -255,7 +258,8 @@
                     <connections>
                         <outlet property="addWorkoutButton" destination="wFQ-FE-hQf" id="OQE-nb-uSL"/>
                         <outlet property="workoutsTableView" destination="K6I-o2-tY5" id="eEN-ZW-i0L"/>
-                        <segue destination="rxI-yJ-0av" kind="show" id="nqM-R9-58C"/>
+                        <segue destination="rxI-yJ-0av" kind="show" identifier="addWorkout" id="nqM-R9-58C"/>
+                        <segue destination="rxI-yJ-0av" kind="show" identifier="editWorkout" id="gx4-RC-o86"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFJ-W4-Nbp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -282,7 +286,7 @@
                                 <rect key="frame" x="0.0" y="162" width="414" height="734"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="60" rowHeight="60" id="fwz-1X-KKh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" rowHeight="60" id="fwz-1X-KKh" customClass="ExerciseTableViewCell" customModule="SwoleApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fwz-1X-KKh" id="9Gq-2Y-cOu">
@@ -305,6 +309,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="routineLabel" destination="Kkt-eU-lik" id="ftH-Di-MCh"/>
+                                            <outlet property="typeLabel" destination="Xp0-Ab-nYK" id="gPU-GI-vBN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -603,4 +611,7 @@
         <image name="Circle" width="314" height="311"/>
         <image name="icons8-settings" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gx4-RC-o86"/>
+    </inferredMetricsTieBreakers>
 </document>

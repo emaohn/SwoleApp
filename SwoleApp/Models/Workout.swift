@@ -9,12 +9,8 @@
 import Foundation
 
 struct Workout {
-    var exerciseType: ExerciseType
+    var title: String
+    var exercises: [Exercise]
 }
 
-enum ExerciseType: String {
-    case Curl = "Curl"
-    case BenchPress = "BenchPress"
-    case Lunge = "Lunge"
-    case PushUp = "PushUp"
-}
+
