@@ -22,6 +22,8 @@
 		E8DBC2EB235C073D004084D2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2EA235C073D004084D2 /* NotificationController.swift */; };
 		E8DBC2ED235C073E004084D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DBC2EC235C073E004084D2 /* Assets.xcassets */; };
 		E8DBC303235C0839004084D2 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC302235C0839004084D2 /* HistoryTableViewCell.swift */; };
+		E8DBC305235C09F3004084D2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC304235C09F3004084D2 /* Person.swift */; };
+		E8DBC307235C0A30004084D2 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC306235C0A30004084D2 /* Workout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		E8DBC2EE235C073E004084D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8DBC2EF235C073E004084D2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		E8DBC302235C0839004084D2 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		E8DBC304235C09F3004084D2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E8DBC306235C0A30004084D2 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +142,6 @@
 				E8DBC2C1235C0737004084D2 /* AppDelegate.swift */,
 				E8DBC2C3235C0737004084D2 /* SceneDelegate.swift */,
 				E8DBC2CA235C073C004084D2 /* Assets.xcassets */,
-				E8DBC2CC235C073C004084D2 /* LaunchScreen.storyboard */,
 				E8DBC2CF235C073C004084D2 /* Info.plist */,
 			);
 			path = SwoleApp;
@@ -186,6 +189,8 @@
 		E8DBC2FF235C07FE004084D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E8DBC304235C09F3004084D2 /* Person.swift */,
+				E8DBC306235C0A30004084D2 /* Workout.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				E8DBC2C7235C0737004084D2 /* Main.storyboard */,
+				E8DBC2CC235C073C004084D2 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -340,7 +346,9 @@
 				E8DBC2C6235C0737004084D2 /* ViewController.swift in Sources */,
 				E8DBC2C2235C0737004084D2 /* AppDelegate.swift in Sources */,
 				E8DBC303235C0839004084D2 /* HistoryTableViewCell.swift in Sources */,
+				E8DBC305235C09F3004084D2 /* Person.swift in Sources */,
 				E8DBC2C4235C0737004084D2 /* SceneDelegate.swift in Sources */,
+				E8DBC307235C0A30004084D2 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
