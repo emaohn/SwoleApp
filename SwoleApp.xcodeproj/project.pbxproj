@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4618EEF1235CE85800DF3784 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4618EEEC235CE85800DF3784 /* MainView.swift */; };
+		4618EEF2235CE85800DF3784 /* AccelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4618EEED235CE85800DF3784 /* AccelModel.swift */; };
+		4618EEF3235CE85800DF3784 /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4618EEEE235CE85800DF3784 /* SensorModel.swift */; };
+		4618EEF4235CE85800DF3784 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4618EEEF235CE85800DF3784 /* ArrowView.swift */; };
+		4618EEF5235CE85800DF3784 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4618EEF0235CE85800DF3784 /* HostingController.swift */; };
 		E8DBC2C2235C0737004084D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2C1235C0737004084D2 /* AppDelegate.swift */; };
 		E8DBC2C4235C0737004084D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2C3235C0737004084D2 /* SceneDelegate.swift */; };
 		E8DBC2C6235C0737004084D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2C5235C0737004084D2 /* ViewController.swift */; };
@@ -80,6 +85,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4618EEEC235CE85800DF3784 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4618EEED235CE85800DF3784 /* AccelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelModel.swift; sourceTree = "<group>"; };
+		4618EEEE235CE85800DF3784 /* SensorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
+		4618EEEF235CE85800DF3784 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		4618EEF0235CE85800DF3784 /* HostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		E8DBC2BE235C0737004084D2 /* SwoleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwoleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DBC2C1235C0737004084D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8DBC2C3235C0737004084D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +192,11 @@
 		E8DBC2E5235C073D004084D2 /* SwoleApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4618EEED235CE85800DF3784 /* AccelModel.swift */,
+				4618EEEF235CE85800DF3784 /* ArrowView.swift */,
+				4618EEF0235CE85800DF3784 /* HostingController.swift */,
+				4618EEEC235CE85800DF3784 /* MainView.swift */,
+				4618EEEE235CE85800DF3784 /* SensorModel.swift */,
 				E8DBC2E6235C073D004084D2 /* InterfaceController.swift */,
 				E8DBC2E8235C073D004084D2 /* ExtensionDelegate.swift */,
 				E8DBC2EA235C073D004084D2 /* NotificationController.swift */,
@@ -401,7 +416,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8DBC2EB235C073D004084D2 /* NotificationController.swift in Sources */,
+				4618EEF1235CE85800DF3784 /* MainView.swift in Sources */,
+				4618EEF5235CE85800DF3784 /* HostingController.swift in Sources */,
+				4618EEF2235CE85800DF3784 /* AccelModel.swift in Sources */,
+				4618EEF3235CE85800DF3784 /* SensorModel.swift in Sources */,
 				E8DBC2E9235C073D004084D2 /* ExtensionDelegate.swift in Sources */,
+				4618EEF4235CE85800DF3784 /* ArrowView.swift in Sources */,
 				E8DBC2E7235C073D004084D2 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
