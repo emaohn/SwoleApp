@@ -33,7 +33,7 @@ class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func reloadData() {
-        
+        workoutsTableView.reloadData()
     }
     
     @IBAction func addWorkoutButton(_ sender: Any) {
@@ -47,6 +47,8 @@ class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableVi
             destination?.exercises = [Exercise]()
         case "editWorkout":
             destination?.workout = selectedWorkout
+            destination?.nameTextField.text = selectedWorkout?.title
+            destination?.exercises = selectedWorkout?.exercises
         default: return
         }
     }

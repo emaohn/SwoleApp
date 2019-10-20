@@ -17,9 +17,11 @@ class CreateExerciseViewController: UIViewController {
        
     }
     @IBAction func cancelButtonPressed(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name("ToggleNewExercise"), object: nil)
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name("ToggleNewExercise"), object: nil)
     }
     @IBAction func repStepperToggled(_ sender: Any) {
     }

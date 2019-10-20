@@ -266,10 +266,10 @@
             </objects>
             <point key="canvasLocation" x="1786.9565217391305" y="112.5"/>
         </scene>
-        <!--Edit Workout Table View Controller-->
+        <!--Edit Workout-->
         <scene sceneID="Rwj-q0-yi9">
             <objects>
-                <viewController id="rxI-yJ-0av" customClass="EditWorkoutTableViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rxI-yJ-0av" customClass="EditWorkout" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eb1-ZW-m3F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -397,10 +397,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="amk-oE-DqP"/>
                     <connections>
-                        <outlet property="addExerciseButton" destination="6Tj-uH-F7B" id="H0L-Va-0SZ"/>
+                        <outlet property="addExerciseButton" destination="6Tj-uH-F7B" id="kSd-zl-6Kz"/>
                         <outlet property="doneButton" destination="JX8-TH-Ifw" id="Oie-6g-F5g"/>
+                        <outlet property="editExerciseContainerView" destination="hcf-NZ-pHa" id="EqV-Tc-Yj5"/>
+                        <outlet property="editExerciseTopConstraint" destination="lEH-s5-Rxn" id="S8M-jC-zzv"/>
                         <outlet property="exerciseTableView" destination="LzS-wx-ThL" id="laa-rg-rL8"/>
                         <outlet property="nameTextField" destination="gvu-Zx-WFg" id="JVy-PX-62u"/>
+                        <outlet property="newExerciseContainerView" destination="sUr-Ic-I36" id="hIA-sW-HuS"/>
+                        <outlet property="newExerciseTopContraint" destination="X62-jf-hf8" id="IC5-37-7EJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3F-14-Rps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -447,10 +451,10 @@
             </objects>
             <point key="canvasLocation" x="4022" y="-592"/>
         </scene>
-        <!--Create Exercise Table View Controller-->
+        <!--Create Exercise View Controller-->
         <scene sceneID="3JE-j0-jqW">
             <objects>
-                <viewController id="zVD-Lh-j3S" customClass="CreateExerciseTableViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zVD-Lh-j3S" customClass="CreateExerciseViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ov-fz-VPs">
                         <rect key="frame" x="0.0" y="0.0" width="384" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -458,6 +462,7 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aqe-mA-m3A">
                                 <rect key="frame" x="0.0" y="44" width="384" height="96"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-ID-wfR">
                                 <rect key="frame" x="29" y="190" width="39" height="21"/>
@@ -504,7 +509,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="kh2-l1-o6K"/>
                     </view>
                     <connections>
@@ -545,10 +550,10 @@
             </objects>
             <point key="canvasLocation" x="4141" y="-509"/>
         </scene>
-        <!--Edit Exercise Table View Controller-->
+        <!--Edit Exercise View Controller-->
         <scene sceneID="YYR-aD-jfi">
             <objects>
-                <viewController id="QGE-vt-8qH" customClass="EditExerciseTableViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QGE-vt-8qH" customClass="EditExerciseViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2by-n2-slY">
                         <rect key="frame" x="0.0" y="0.0" width="384" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -598,7 +603,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="kM5-gn-Kvs"/>
                     </view>
                 </viewController>
