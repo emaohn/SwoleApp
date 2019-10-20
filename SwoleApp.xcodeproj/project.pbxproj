@@ -21,6 +21,7 @@
 		E8DBC2E9235C073D004084D2 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2E8235C073D004084D2 /* ExtensionDelegate.swift */; };
 		E8DBC2EB235C073D004084D2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC2EA235C073D004084D2 /* NotificationController.swift */; };
 		E8DBC2ED235C073E004084D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DBC2EC235C073E004084D2 /* Assets.xcassets */; };
+		E8DBC303235C0839004084D2 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBC302235C0839004084D2 /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		E8DBC2EC235C073E004084D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8DBC2EE235C073E004084D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8DBC2EF235C073E004084D2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E8DBC302235C0839004084D2 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +130,13 @@
 		E8DBC2C0235C0737004084D2 /* SwoleApp */ = {
 			isa = PBXGroup;
 			children = (
+				E8DBC301235C080C004084D2 /* Storyboards */,
+				E8DBC300235C0807004084D2 /* Services */,
+				E8DBC2FF235C07FE004084D2 /* Models */,
+				E8DBC2FE235C07F2004084D2 /* Views */,
+				E8DBC2FD235C07E7004084D2 /* ViewControllers */,
 				E8DBC2C1235C0737004084D2 /* AppDelegate.swift */,
 				E8DBC2C3235C0737004084D2 /* SceneDelegate.swift */,
-				E8DBC2C5235C0737004084D2 /* ViewController.swift */,
-				E8DBC2C7235C0737004084D2 /* Main.storyboard */,
 				E8DBC2CA235C073C004084D2 /* Assets.xcassets */,
 				E8DBC2CC235C073C004084D2 /* LaunchScreen.storyboard */,
 				E8DBC2CF235C073C004084D2 /* Info.plist */,
@@ -160,6 +165,44 @@
 				E8DBC2EF235C073E004084D2 /* PushNotificationPayload.apns */,
 			);
 			path = "SwoleApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		E8DBC2FD235C07E7004084D2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBC2C5235C0737004084D2 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E8DBC2FE235C07F2004084D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBC302235C0839004084D2 /* HistoryTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E8DBC2FF235C07FE004084D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E8DBC300235C0807004084D2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E8DBC301235C080C004084D2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBC2C7235C0737004084D2 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +339,7 @@
 			files = (
 				E8DBC2C6235C0737004084D2 /* ViewController.swift in Sources */,
 				E8DBC2C2235C0737004084D2 /* AppDelegate.swift in Sources */,
+				E8DBC303235C0839004084D2 /* HistoryTableViewCell.swift in Sources */,
 				E8DBC2C4235C0737004084D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
