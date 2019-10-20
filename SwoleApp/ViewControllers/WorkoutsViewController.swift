@@ -20,7 +20,6 @@ class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var workoutsTableView: UITableView!
     @IBOutlet weak var addWorkoutButton: UIButton!
-    @IBOutlet weak var beginButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -32,17 +31,11 @@ class WorkoutsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func setup() {
         addWorkoutButton.layer.cornerRadius = 20
-        beginButton.layer.cornerRadius = 20
-    }
-    
-    @IBAction func editButtonPressed(_ sender: Any) {
     }
     
     @IBAction func addWorkoutButton(_ sender: Any) {
     }
     
-    @IBAction func beginButtonPressed(_ sender: Any) {
-    }
     /*
     // MARK: - Navigation
 

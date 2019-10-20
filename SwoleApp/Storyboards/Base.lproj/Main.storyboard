@@ -262,10 +262,10 @@
             </objects>
             <point key="canvasLocation" x="1786.9565217391305" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Workout Table View Controller-->
         <scene sceneID="Rwj-q0-yi9">
             <objects>
-                <viewController id="rxI-yJ-0av" sceneMemberID="viewController">
+                <viewController id="rxI-yJ-0av" customClass="EditWorkoutTableViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eb1-ZW-m3F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,14 +307,11 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                            </tableView>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="D1c-Ou-qox">
-                                <rect key="frame" x="20" y="246" width="379" height="380"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="Ik0-hm-9MZ" kind="embed" id="Awz-SW-Mcf"/>
+                                    <outlet property="dataSource" destination="rxI-yJ-0av" id="vGf-oW-H7a"/>
+                                    <outlet property="delegate" destination="rxI-yJ-0av" id="cZ9-NY-DU8"/>
                                 </connections>
-                            </containerView>
+                            </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="HzC-vr-PrX">
                                 <rect key="frame" x="15" y="702" width="384" height="145"/>
                                 <subviews>
@@ -328,6 +325,9 @@
                                         <state key="normal" title="Add Exercise">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addExerciseButtonPressed:" destination="rxI-yJ-0av" eventType="touchUpInside" id="Ua5-Hq-qtZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JX8-TH-Ifw">
                                         <rect key="frame" x="0.0" y="85" width="384" height="60"/>
@@ -336,6 +336,9 @@
                                         <state key="normal" title="Done">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="rxI-yJ-0av" eventType="touchUpInside" id="rQb-Zv-v9J"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -344,27 +347,57 @@
                                     <constraint firstItem="6Tj-uH-F7B" firstAttribute="width" secondItem="JX8-TH-Ifw" secondAttribute="width" id="be1-6s-bVW"/>
                                 </constraints>
                             </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUr-Ic-I36">
+                                <rect key="frame" x="15" y="962" width="384" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="lJh-9h-DJX"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="zVD-Lh-j3S" kind="embed" id="EDW-5V-FaO"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcf-NZ-pHa">
+                                <rect key="frame" x="15" y="962" width="384" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="qfW-72-UIn"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="QGE-vt-8qH" kind="embed" id="Inb-Eu-jUo"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Pae-hG-IhL" firstAttribute="trailing" secondItem="sUr-Ic-I36" secondAttribute="trailing" constant="15" id="1DJ-jp-8tt"/>
+                            <constraint firstItem="sUr-Ic-I36" firstAttribute="leading" secondItem="Pae-hG-IhL" secondAttribute="leading" constant="15" id="2hE-sR-wI6"/>
                             <constraint firstItem="HzC-vr-PrX" firstAttribute="leading" secondItem="Pae-hG-IhL" secondAttribute="leading" constant="15" id="35v-Dp-OKr"/>
+                            <constraint firstItem="hcf-NZ-pHa" firstAttribute="leading" secondItem="Pae-hG-IhL" secondAttribute="leading" constant="15" id="8Lq-2z-vPC"/>
                             <constraint firstItem="LzS-wx-ThL" firstAttribute="top" secondItem="gvu-Zx-WFg" secondAttribute="bottom" id="8m8-OD-PjQ"/>
                             <constraint firstItem="Pae-hG-IhL" firstAttribute="bottom" secondItem="HzC-vr-PrX" secondAttribute="bottom" constant="15" id="F9i-XE-kJY"/>
+                            <constraint firstItem="Pae-hG-IhL" firstAttribute="trailing" secondItem="hcf-NZ-pHa" secondAttribute="trailing" constant="15" id="Pbn-Vw-PDm"/>
                             <constraint firstItem="Pae-hG-IhL" firstAttribute="trailing" secondItem="HzC-vr-PrX" secondAttribute="trailing" constant="15" id="SOQ-v2-2yB"/>
                             <constraint firstItem="gvu-Zx-WFg" firstAttribute="leading" secondItem="Pae-hG-IhL" secondAttribute="leading" constant="15" id="SY4-Ku-Pfw"/>
                             <constraint firstItem="Pae-hG-IhL" firstAttribute="trailing" secondItem="gvu-Zx-WFg" secondAttribute="trailing" constant="15" id="UIG-Gd-gXW"/>
+                            <constraint firstItem="sUr-Ic-I36" firstAttribute="top" secondItem="gvu-Zx-WFg" secondAttribute="bottom" constant="800" id="X62-jf-hf8"/>
                             <constraint firstAttribute="bottom" secondItem="LzS-wx-ThL" secondAttribute="bottom" id="haD-rQ-bjq"/>
                             <constraint firstItem="gvu-Zx-WFg" firstAttribute="top" secondItem="Pae-hG-IhL" secondAttribute="top" constant="24" id="iST-gA-KfS"/>
+                            <constraint firstItem="hcf-NZ-pHa" firstAttribute="top" secondItem="gvu-Zx-WFg" secondAttribute="bottom" constant="800" id="lEH-s5-Rxn"/>
                             <constraint firstItem="LzS-wx-ThL" firstAttribute="leading" secondItem="Pae-hG-IhL" secondAttribute="leading" id="tdY-Bf-h8J"/>
                             <constraint firstItem="Pae-hG-IhL" firstAttribute="trailing" secondItem="LzS-wx-ThL" secondAttribute="trailing" id="vBy-tb-ukH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pae-hG-IhL"/>
                     </view>
                     <navigationItem key="navigationItem" id="amk-oE-DqP"/>
+                    <connections>
+                        <outlet property="addExerciseButton" destination="6Tj-uH-F7B" id="H0L-Va-0SZ"/>
+                        <outlet property="doneButton" destination="JX8-TH-Ifw" id="Oie-6g-F5g"/>
+                        <outlet property="exerciseTableView" destination="LzS-wx-ThL" id="laa-rg-rL8"/>
+                        <outlet property="nameTextField" destination="gvu-Zx-WFg" id="JVy-PX-62u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3F-14-Rps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2589.8550724637685" y="112.5"/>
+            <point key="canvasLocation" x="2566.666666666667" y="-38.169642857142854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hzS-gv-YQu">
@@ -392,18 +425,169 @@
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="5Z4-zo-YCI">
+        <scene sceneID="zum-eF-cVT">
             <objects>
-                <viewController id="Ik0-hm-9MZ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QO9-qP-fJG">
-                        <rect key="frame" x="0.0" y="0.0" width="310" height="380"/>
+                <viewController id="5NB-gH-0la" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HFt-kJ-NJP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="P1a-Jy-7ZD"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1i0-wm-R8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sb9-62-tmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="644"/>
+            <point key="canvasLocation" x="4022" y="-592"/>
+        </scene>
+        <!--Create Exercise Table View Controller-->
+        <scene sceneID="3JE-j0-jqW">
+            <objects>
+                <viewController id="zVD-Lh-j3S" customClass="CreateExerciseTableViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ov-fz-VPs">
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aqe-mA-m3A">
+                                <rect key="frame" x="0.0" y="44" width="384" height="96"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-ID-wfR">
+                                <rect key="frame" x="29" y="190" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQk-vk-0LQ">
+                                <rect key="frame" x="29" y="280" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cpp-F3-u4o">
+                                <rect key="frame" x="264" y="179" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yiq-4Z-ATt">
+                                <rect key="frame" x="264" y="274" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slp-bG-C1w">
+                                <rect key="frame" x="16" y="6" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="zVD-Lh-j3S" eventType="touchUpInside" id="Pxv-Lv-erN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbV-NZ-dzM">
+                                <rect key="frame" x="327" y="6" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="zVD-Lh-j3S" eventType="touchUpInside" id="r9G-dE-OKj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kh2-l1-o6K"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFr-DZ-V7T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2566.666666666667" y="503.57142857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qXb-Dc-Dbb">
+            <objects>
+                <viewController id="eY8-ob-Nsr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xPc-J6-GfD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eOK-Ea-ohq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQk-l7-lUG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4142" y="-593"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UKf-gX-FLF">
+            <objects>
+                <viewController id="PTP-4O-VPi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9jd-h0-uCN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Y46-1i-cKl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ld-56-Jai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4141" y="-509"/>
+        </scene>
+        <!--Edit Exercise Table View Controller-->
+        <scene sceneID="YYR-aD-jfi">
+            <objects>
+                <viewController id="QGE-vt-8qH" customClass="EditExerciseTableViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2by-n2-slY">
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T80-Z5-Xfc">
+                                <rect key="frame" x="53" y="88" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xS0-9q-DVA">
+                                <rect key="frame" x="53" y="160" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="q5A-tB-tEP">
+                                <rect key="frame" x="274" y="82" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="repStepperToggled:" destination="QGE-vt-8qH" eventType="valueChanged" id="nIx-VM-I6q"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="pq6-ib-08f">
+                                <rect key="frame" x="274" y="160" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="setStepperToggled:" destination="QGE-vt-8qH" eventType="valueChanged" id="CJa-bd-TPC"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB1-rV-ARi">
+                                <rect key="frame" x="16" y="6" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="QGE-vt-8qH" eventType="touchUpInside" id="bjO-hp-7Ei"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQ1-G8-X0O">
+                                <rect key="frame" x="327" y="6" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="QGE-vt-8qH" eventType="touchUpInside" id="NA3-MC-hUE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kM5-gn-Kvs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ftX-RR-g15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3295.652173913044" y="1.3392857142857142"/>
         </scene>
     </scenes>
     <resources>
