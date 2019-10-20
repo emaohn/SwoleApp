@@ -10,6 +10,7 @@ import UIKit
 
 class CreateExerciseViewController: UIViewController {
 
+    @IBOutlet weak var exercisePickerView: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,5 +20,9 @@ class CreateExerciseViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+    }
+    @IBAction func repStepperToggled(_ sender: Any) {
+    }
+    @IBAction func stepStepperToggled(_ sender: Any) {
     }
 }
