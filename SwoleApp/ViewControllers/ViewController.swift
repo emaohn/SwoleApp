@@ -13,7 +13,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var statsView: UIView!
     @IBOutlet weak var historyTableView: UITableView!
     @IBOutlet weak var startWorkoutButton: UIButton!
-    var users: [Person] = [Person(user_id: "0", username: "emmie", workoutHistory: [Workout(exerciseType: .BenchPress), Workout(exerciseType: .Curl)]), Person(user_id: "1", username: "seb", workoutHistory: [Workout(exerciseType: .BenchPress), Workout(exerciseType: .Curl)]), Person(user_id: "2", username: "larry", workoutHistory: [Workout(exerciseType: .BenchPress), Workout(exerciseType: .Curl)]), Person(user_id: "3", username: "Anthony", workoutHistory: [Workout(exerciseType: .BenchPress), Workout(exerciseType: .Curl)])]
+
+    let user = Person(user_id: "0", username: "emmie", workoutHistory: [Workout(exerciseType: .BenchPress), Workout(exerciseType: .Curl), Workout(exerciseType: .PushUp)])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,24 +30,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func startWorkoutButtonPressed(_ sender: Any) {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users[0].workoutHistory.count
+        return user.workoutHistory.count + 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 40
+        }
         return 80
     }
        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = historyTableView.dequeueReusableCell(withIdentifier: "historyTableViewCell", for: indexPath) as! HistoryTableViewCell
-        let workout = users[0].workoutHistory[indexPath.row]
-        switch workout.exerciseType {
-        case .BenchPress: cell.label.text = "bench press"
-        case .Curl: cell.label.text = "curl"
-        case .Lunge: cell.label.text = "lunge"
-        case .PushUp: cell.label.text = "pushup"
-        default: return cell
+        if (indexPath.row == 0) {
+            return historyTableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath)
         }
+        let cell = historyTableView.dequeueReusableCell(withIdentifier: "historyTableViewCell", for: indexPath) as! HistoryTableViewCell
+        let workout = user.workoutHistory[indexPath.row - 1]
+        cell.dateLabel.text = "Saturday, 10/19/19"
+        cell.workoutListLabel.text = "Bench press, lunges, pushups"
+        
         return cell;
+    }
+    
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+        
     }
 }
 

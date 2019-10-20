@@ -7,6 +7,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Settings-->
+        <scene sceneID="gM1-lx-3PR">
+            <objects>
+                <viewController id="v7L-AW-wkW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eaA-Cz-2BY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XnY-tC-ObE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="mZP-FD-85t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHj-Of-Ten" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="-532"/>
+        </scene>
         <!--Hi, Anthony-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -19,39 +35,62 @@
                                 <rect key="frame" x="15" y="103" width="384" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="sEj-Jg-P7M"/>
+                                    <constraint firstAttribute="height" constant="180" id="vDc-Ho-7P7"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uB3-vQ-J26">
-                                <rect key="frame" x="0.0" y="307" width="414" height="589"/>
+                                <rect key="frame" x="15" y="307" width="384" height="589"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CcA-Md-mYL">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleCell" id="CcA-Md-mYL">
+                                        <rect key="frame" x="0.0" y="28" width="384" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CcA-Md-mYL" id="fTI-Xj-2Wu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyTableViewCell" rowHeight="60" id="3Mp-bW-9E6" customClass="HistoryTableViewCell" customModule="SwoleApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="71.5" width="414" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Mp-bW-9E6" id="vMr-T0-TXg" customClass="HistoryTableViewCell" customModule="SwoleApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icT-mb-jvX">
-                                                    <rect key="frame" x="20" y="20" width="184" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C89-4l-sXP">
+                                                    <rect key="frame" x="15" y="8" width="163" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="C89-4l-sXP" secondAttribute="height" multiplier="163:28" id="4U5-GU-LpD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="23"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="C89-4l-sXP" firstAttribute="leading" secondItem="fTI-Xj-2Wu" secondAttribute="leading" constant="15" id="9HF-qU-CVL"/>
+                                                <constraint firstItem="C89-4l-sXP" firstAttribute="centerY" secondItem="fTI-Xj-2Wu" secondAttribute="centerY" id="u59-gX-DLI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyTableViewCell" rowHeight="80" id="3Mp-bW-9E6" customClass="HistoryTableViewCell" customModule="SwoleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="71.5" width="384" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Mp-bW-9E6" id="vMr-T0-TXg" customClass="HistoryTableViewCell" customModule="SwoleApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bench press, curls, lunges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5l-ku-mnk">
+                                                    <rect key="frame" x="20" y="49" width="359" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saturday, 10/19/19 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icT-mb-jvX">
+                                                    <rect key="frame" x="20" y="15" width="359" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="label" destination="icT-mb-jvX" id="3m4-ws-uEN"/>
+                                            <outlet property="dateLabel" destination="icT-mb-jvX" id="hv2-qZ-UwM"/>
+                                            <outlet property="workoutListLabel" destination="r5l-ku-mnk" id="dJs-x2-Pb7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -64,35 +103,39 @@
                                 <rect key="frame" x="15" y="787" width="384" height="60"/>
                                 <color key="backgroundColor" red="0.87058823529999996" green="0.23529411759999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="DHN-6z-Net"/>
+                                    <constraint firstAttribute="height" constant="60" id="aDM-Yj-yKI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                 <state key="normal" title="Start Workout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="startWorkoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chq-sE-CiO"/>
+                                    <segue destination="5mJ-rf-3Zs" kind="show" id="1uP-MV-rVd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="NrT-fW-lqH" secondAttribute="trailing" constant="15" id="AyI-8u-4JG"/>
-                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="9JA-6e-e8s" secondAttribute="trailing" constant="15" id="H0Z-Tl-1Zv"/>
-                            <constraint firstItem="9JA-6e-e8s" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="15" id="KnX-kp-rna"/>
-                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="NrT-fW-lqH" secondAttribute="bottom" constant="15" id="Soz-e5-do7"/>
-                            <constraint firstItem="uB3-vQ-J26" firstAttribute="top" secondItem="9JA-6e-e8s" secondAttribute="bottom" constant="24" id="Uyh-ht-h2P"/>
-                            <constraint firstItem="NrT-fW-lqH" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="15" id="Y5E-BN-DEf"/>
-                            <constraint firstItem="uB3-vQ-J26" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" id="ab5-D3-Iay"/>
-                            <constraint firstItem="uB3-vQ-J26" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="do2-c6-0LR"/>
-                            <constraint firstItem="9JA-6e-e8s" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" constant="15" id="fTv-dB-KEC"/>
-                            <constraint firstAttribute="bottom" secondItem="uB3-vQ-J26" secondAttribute="bottom" id="mdq-AX-uO4"/>
+                            <constraint firstAttribute="bottom" secondItem="uB3-vQ-J26" secondAttribute="bottom" id="6TR-Gf-fsP"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="NrT-fW-lqH" secondAttribute="trailing" constant="15" id="Buo-Ja-USw"/>
+                            <constraint firstItem="9JA-6e-e8s" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="15" id="F15-r3-bU4"/>
+                            <constraint firstItem="uB3-vQ-J26" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="15" id="I9N-bv-I56"/>
+                            <constraint firstItem="NrT-fW-lqH" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="15" id="N1M-gH-gyv"/>
+                            <constraint firstItem="9JA-6e-e8s" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" constant="15" id="T7q-qc-8Df"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="9JA-6e-e8s" secondAttribute="trailing" constant="15" id="Uiz-T0-kce"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="NrT-fW-lqH" secondAttribute="bottom" constant="15" id="md6-X7-HbY"/>
+                            <constraint firstItem="uB3-vQ-J26" firstAttribute="top" secondItem="9JA-6e-e8s" secondAttribute="bottom" constant="24" id="wWV-4T-7Xf"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="uB3-vQ-J26" secondAttribute="trailing" constant="15" id="yFA-5M-ODJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hi, Anthony" id="s0e-UL-r5e">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-settings" id="sWc-vF-Dfv">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <segue destination="v7L-AW-wkW" kind="show" id="PeT-6g-ZJZ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -105,20 +148,100 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Workouts-->
         <scene sceneID="kJK-Uw-Iel">
             <objects>
-                <viewController id="5mJ-rf-3Zs" sceneMemberID="viewController">
+                <viewController id="5mJ-rf-3Zs" customClass="WorkoutsViewController" customModule="SwoleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XRI-VB-lPF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K6I-o2-tY5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="80" id="1BE-O9-NMo" customClass="WorkoutTableViewCell" customModule="SwoleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1BE-O9-NMo" id="m8B-Op-R7I">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-zb-1kj">
+                                                    <rect key="frame" x="20" y="30" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJE-xo-LPe">
+                                                    <rect key="frame" x="352" y="29" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5mJ-rf-3Zs" id="dhP-DL-Dvx"/>
+                                    <outlet property="delegate" destination="5mJ-rf-3Zs" id="dCd-4N-OiL"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="jRb-u8-6y5">
+                                <rect key="frame" x="15" y="710" width="384" height="137"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-FE-hQf">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
+                                        <color key="backgroundColor" red="0.25490196078431371" green="0.82745098039215681" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="597-LG-u3c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <state key="normal" title="Add Workout">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znz-vS-gou">
+                                        <rect key="frame" x="0.0" y="77" width="384" height="60"/>
+                                        <color key="backgroundColor" red="0.87058823529999996" green="0.23529411759999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="VDo-TU-aOY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <state key="normal" title="Begin">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wFQ-FE-hQf" firstAttribute="width" secondItem="jRb-u8-6y5" secondAttribute="width" id="I7q-HD-Q5r"/>
+                                    <constraint firstItem="wFQ-FE-hQf" firstAttribute="height" secondItem="znz-vS-gou" secondAttribute="height" id="TbB-RF-gCp"/>
+                                    <constraint firstItem="znz-vS-gou" firstAttribute="width" secondItem="wFQ-FE-hQf" secondAttribute="width" id="Xio-2o-YAq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ya-0m-di6" firstAttribute="trailing" secondItem="jRb-u8-6y5" secondAttribute="trailing" constant="15" id="49t-Px-wnE"/>
+                            <constraint firstItem="K6I-o2-tY5" firstAttribute="leading" secondItem="2Ya-0m-di6" secondAttribute="leading" id="6mF-0O-ODk"/>
+                            <constraint firstItem="2Ya-0m-di6" firstAttribute="bottom" secondItem="jRb-u8-6y5" secondAttribute="bottom" constant="15" id="WEZ-AN-2gP"/>
+                            <constraint firstAttribute="bottom" secondItem="K6I-o2-tY5" secondAttribute="bottom" id="d6W-od-O9n"/>
+                            <constraint firstItem="K6I-o2-tY5" firstAttribute="top" secondItem="2Ya-0m-di6" secondAttribute="top" id="lLS-vh-tvc"/>
+                            <constraint firstItem="jRb-u8-6y5" firstAttribute="leading" secondItem="2Ya-0m-di6" secondAttribute="leading" constant="15" id="nTb-Wq-a3d"/>
+                            <constraint firstItem="2Ya-0m-di6" firstAttribute="trailing" secondItem="K6I-o2-tY5" secondAttribute="trailing" id="z8O-kn-fut"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2Ya-0m-di6"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Workouts" id="iAS-hI-zvU">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Gxh-MM-9iP"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFJ-W4-Nbp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="113"/>
+            <point key="canvasLocation" x="1786.9565217391305" y="112.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hzS-gv-YQu">

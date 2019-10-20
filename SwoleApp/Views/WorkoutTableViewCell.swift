@@ -1,18 +1,15 @@
 //
-//  HistoryTableViewCell.swift
+//  WorkoutTableViewCell.swift
 //  SwoleApp
 //
-//  Created by Emmie Ohnuki on 10/19/19.
+//  Created by Emmie Ohnuki on 10/20/19.
 //  Copyright © 2019 Emmie Ohnuki. All rights reserved.
 //
 
 import UIKit
 
-class HistoryTableViewCell: UITableViewCell {
+class WorkoutTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var workoutListLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
