@@ -24,7 +24,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func setup() {
         statsView.layer.cornerRadius = 15
-        startWorkoutButton.layer.cornerRadius = 30
+        historyTableView.layer.cornerRadius = 15
+        startWorkoutButton.layer.cornerRadius = 20
     }
 
     @IBAction func startWorkoutButtonPressed(_ sender: Any) {
